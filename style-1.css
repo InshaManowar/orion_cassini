@@ -4,11 +4,27 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 )
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+
 }
+/*ading animation for header*/
+.text1{
+	animation:text 3s 1;
+}
+@keyframes text {
+	0%{
+		color:black;
+		margin-bottom: -40px;
+	}
+	30%{
+		letter-spacing: 25px;
+		margin-bottom:-40px;
+	}
+	85%{
+		letter-spacing: 8px;
+		margin-bottom: -40px;
+	}
+}
+/**animation ends here**/
 .logo{
   padding-top: 2px;
   width: 65px;
@@ -156,6 +172,9 @@ input[type="checkbox"]{
 
 
   }
+  .icon-bar{
+    display: none;
+  }
 }
 @media (max-width: 920px) {
   nav .menu-btn i{
@@ -176,7 +195,7 @@ input[type="checkbox"]{
     position: fixed;
     top: 80px;
     left: -100%;
-    background: #111;
+    background: rgba(17, 17, 17, 0.753);
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -269,19 +288,20 @@ body {
 }
 @media (max-width:600px) {
 .wrapper{
-font-size: 1.3em;
+font-size: 1.1em;
 width: fit-content;
 
 }
 .wrapper h2{
   position: relative;
-  left:-8px;
-  font-size: 25;
+  left:1px;
+  font-size: 18;
   padding: 3%;
 }
 .wrapper h1{
   position: relative;
-  left:-8px;
+right: 10px;
+	margin-top:45%;
 
 }
 }
@@ -308,7 +328,7 @@ width: fit-content;
 }
 .main-wrapper{
   position: relative;
-  top: 30%;
+  top: 12%;
 }
 }
 @media (max-width:600px) {
@@ -328,7 +348,7 @@ width: fit-content;
     width: 270px !important;
     padding:2%;
     left: 10% !important;
-    margin-top: 40%;
+    margin-top: 20%;
     bottom: 20%;
 }
 }
@@ -348,6 +368,7 @@ width: fit-content;
   top: 450px;
 
 }
+
 }
 .content-a{
     padding-left: 3%;
@@ -383,13 +404,17 @@ width: fit-content;
   width: 500px;
   position: relative;
   right: 3%;
-	box-shadow: -2px 13px 7px -4px rgba(233,240,242,1);
+	-webkit-box-shadow: 0 15px 10px rgb(58, 54, 54);
+      -moz-box-shadow: 0 15px 10px rgb(90, 86, 86);
+      box-shadow: 0 15px 10px rgb(14, 13, 13);
 }
 .planet-image{
   width: 500px;
   position: relative;
   left: 2%;
-	box-shadow: 10px 10px 19px 0px rgba(233,240,242,1);
+	-webkit-box-shadow: 0 15px 10px rgb(58, 54, 54);
+      -moz-box-shadow: 0 15px 10px rgb(90, 86, 86);
+      box-shadow: 0 15px 10px rgb(14, 13, 13);
 
 }
 .spacey-image{
@@ -397,7 +422,9 @@ width: fit-content;
   position: relative;
   left: 120%;
   top:300px;
-	box-shadow: 10px 10px 19px 0px rgba(233,240,242,1);
+	-webkit-box-shadow: 0 15px 10px rgb(58, 54, 54);
+      -moz-box-shadow: 0 15px 10px rgb(90, 86, 86);
+      box-shadow: 0 15px 10px rgb(14, 13, 13);
 
 }
 .buttons{
@@ -411,20 +438,28 @@ a{
 
 }
 .sturdy-image{
-  width: 300px;
-  margin-bottom: 15%;
+  width: 250px;
+  margin-bottom: 8%;
 }
 .planet-image{
-  width: 300px;
-  margin-bottom: 15%;
+  width: 250px;
+  margin-bottom: 8%;
+  position: relative;
+  left: -6%;
+  top: 3px;
 
 }
 .spacey-image{
-  width: 300px;
-  margin-bottom: 15%;
+  width: 250px;
+  margin-bottom: 8%;
   position: relative;
-  left: -10px;
+  left: 4%;
   top: 20px;
+}
+p {
+  font-size: 90% !important;
+  line-height: 150%;
+  color: #333;
 }
 }
 .heading{
@@ -468,7 +503,7 @@ h1 {
 }
 
 p {
-  font-size: 140%;
+  font-size: 130%;
   line-height: 150%;
   color: #333;
 }
@@ -596,6 +631,8 @@ p {
 table {
   width: 50%;
   border-collapse: collapse;
+	transform: scale(1);
+	transition: 0.5s;
 
 }
 /* Zebra striping */
@@ -608,9 +645,11 @@ th {
   font-weight: bold;
 }
 td, th {
+		border-bottom: 1px solid black;
   padding: 6px;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   text-align: left;
+
 }
 /* #slide3:before {
   background-image: url("https://lorempixel.com/640/480/abstract/5/");
@@ -1048,7 +1087,82 @@ td, th {
 
   }
   .info-table td{
-    
-  }  
+
+  }
   .info-table table{
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+.content-heading-1{
+  font-size: 2em ;
+}
+.content-heading-2{
+  position: relative;
+  top: 0%;
+  right: 0%;
+  left: 25%;
+}
+.sturdy-image, .spacey-image{
+  width: 90% !important;
+} 
+.content-a{
+  width: 600px !important;
+  font-size: 1.5em;
+  
+}
+.planet-image{
+  width: 90% !important;
+
+}
+.specs{
+  font-size: 3em;
+}
+nav{
+  width: 90%;
+}
+.wrapper h1{
+  position: relative;
+  left: 2%;
+  margin-top: 25%;
+  font-size: 2em;
+}
+.wrapper h2{
+  font-size: 0.6em;
+  position: relative;
+  left: 0%;
+}
+
+}
+/* iphone 5 media queries */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .planet-image{
+      width: 200px;
+    }
+
+.content-a{
+  font-size: 1em;
+  margin-top: 50%;
+  width: 240px !important;
+}
+.margin-custom-2{
+  margin-top: 200%;
+}
+.content-b{
+  width: 240px !important;
+  font-size: 1em;
+  
+}
+.content-heading-2, .content-heading-1{
+  font-size: 1em;
+  position: relative;
+  left: 6% !important;
+}
 }

@@ -8,6 +8,23 @@
     box-sizing: border-box;
     color: #777;
 }
+.text1{
+	animation:text 3s 1;
+}
+@keyframes text {
+	0%{
+		color:black;
+		margin-bottom: -40px;
+	}
+	30%{
+		letter-spacing: 25px;
+		margin-bottom:-40px;
+	}
+	85%{
+		letter-spacing: 8px;
+		margin-bottom: -40px;
+	}
+}
 
 html, body {
     margin: 0;
@@ -22,7 +39,7 @@ nav{
     display: flex;
     height: 80px;
     width: 100%;
-    background: #ed5107;
+    background: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px 0 100px;
@@ -504,8 +521,7 @@ background-image: linear-gradient(315deg, #ef5734 0%, #ffcc2f 74%);
     font-size: 3em;
     color: rgb(231, 226, 226);
     margin-right: 20px;
-    font-family: Montserrat
-
+    font-family: 'Abril Fatface', cursive;
 }
 
 .cart-total-price {
